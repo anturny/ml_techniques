@@ -6,6 +6,8 @@ This project compares various six machine learning techniques across four datase
 - Why might SVMs not work well on all classes of Iris?
 - When is supervised learning preferable? When might unsupervised methods be used?
 
+This GitHub repository was made in collaboration by [Yarah Al-Fouleh](https://github.com/yarah-yma1), [Senem Keceli](https://github.com/senem584), and [Anthony Nguyen](https://github.com/anturny).
+
 ## Table of Contents
 - [Implementation](#implementation)
 - [Datasets](#datasets)
