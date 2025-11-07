@@ -4,9 +4,13 @@ from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score, classification_report
 import data
 
+'''In order to run this script, you can open a terminal and use the command: python src/svmExp.py <dataset_name>
+where <dataset_name> can be one of the following: iris, mnist, fashion_mnist, cifar10. This will load the specified dataset, 
+train an SVM classifier on it, and print out the accuracy and classification report.'''
+
 def main():
     if len(sys.argv) != 2:
-        print("Usage: python src/svmExp.py *<dataset_name>*")
+        print("Usage: python src/svmExp.py <dataset_name>")
         print("Available datasets: iris, mnist, fashion_mnist, cifar10")
         sys.exit(1)
     
