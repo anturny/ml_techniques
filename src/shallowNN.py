@@ -2,7 +2,8 @@ import sys
 import data
 import os
 import tensorflow as tf
-from tensorflow.keras import layers, models
+import keras
+from keras import layers, models
 import numpy as np
 from sklearn.metrics import classification_report
 
@@ -65,8 +66,8 @@ def main():
     num_classes = len(np.unique(y_train))
     
     # Convert labels to categorical
-    y_train_cat = tf.keras.utils.to_categorical(y_train, num_classes)
-    y_test_cat = tf.keras.utils.to_categorical(y_test, num_classes)
+    y_train_cat = keras.utils.to_categorical(y_train, num_classes)
+    y_test_cat = keras.utils.to_categorical(y_test, num_classes)
     
     # Build model
     model = build_model(input_shape, num_classes, layers_count)
@@ -92,7 +93,7 @@ def main():
 
     # Clear Keras / TF state to avoid background threads preventing process exit
     try:
-        tf.keras.backend.clear_session()
+        keras.backend.clear_session()
     except Exception:
         pass
 
