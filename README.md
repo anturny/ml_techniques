@@ -49,17 +49,19 @@ Machine learning is a subcategory of artificial intelligence that enables comput
         - ![alt_text](/media/snnMNIST2layer.PNG)
 
 
-- Deep Neural Networks
-    - More intricate than Shallow Neural Networks and have many layers that allow them to model complex and hierarchical features.
+- Deep Neural Networks (Runtime: 5 minutes)
+    - Deep neural networks are complex machine learning models with multiple layers that automatically learn hierarchical features from data, enabling them to perform tasks like image recognition, natural language processing, and speech recognition. They are used when dealing with large, complex datasets that require capturing intricate patterns and relationships beyond the capabilities of shallow models.
+        - The results clearly show that the accuracy on the training data (78%) is significantly higher than on the test data (42%), indicating the model has overfitted to the training set and does not generalize well to unseen data. As we increase the number of layers and epochs in a deep neural network, the model becomes more expressive and able to learn complex patterns, which often leads to higher training accuracy. However, this increased capacity can also cause the network to memorize the training examples rather than learn generalizable features, especially if training continues for many epochs. This phenomenon illustrates a common trade-off in deep learning: deeper networks with more epochs can achieve very high training accuracy but may not improve, or even worsen, test accuracy without proper regularization or data augmentation. It highlights the importance of balancing model complexity and training duration to avoid overfitting, ensuring the model captures generalizable features rather than noise in the training data.
+        - ![alt_text](/media/dnnCIFAR1010layer100epoch.PNG)
 
 - Convolutional Neural Networks (CNN)
-    - Specialized for image data and comparing convolutional layers to capture spatial features
+    - Convolutional neural networks (CNNs) are a type of deep learning model designed to automatically extract and learn hierarchical features from grid-like data such as images, using convolutional layers that capture spatial patterns. They are primarily used in tasks like image and video recognition, object detection, and facial recognition, where understanding spatial relationships is crucial for accurate predictions.
 
 - Decision Trees
-    - Splits data based on feature thresholds to create a flowchart-like model for classification or regression.
+    - Decision trees are a supervised learning method that model decisions by splitting data based on feature values, creating a tree-like structure for classification or regression. They are used in situations where interpretability is important, such as customer segmentation or medical diagnosis, and work well with structured data of varying complexity.
 
 - Random Forest
-    - Ensemble of decision trees that improve accuracy and validation by combining multiple tree predictions.
+    - Random forests are an ensemble learning method that build multiple decision trees using different subsets of data and features, then combine their predictions to improve accuracy and reduce overfitting. They are commonly used in classification and regression tasks where high performance and robustness are needed, such as in finance, bioinformatics, and feature rich datasets.
 
 ## Requirements
 This repository is mostly a read only repository. However, if you would like to follow along with the code, please have the following programs ready:
@@ -80,6 +82,11 @@ Use 'pip install -r requirements.txt' to install the required dependencies.
 - When the virtual environment is open (appears as .venv in the list of items in the left menu), you may navigate to the various .py files containing machine learning technique codes and select it. At this point, you may open your terminal and install the pip requirements for the necessary libraries in order to execute the code. Then, you may hit "Run" on the top right hand corner to execute the code.
 
 - Each machine learning technique's .py file under the src folder will have their own set of instructions, but everything requires an initial run of the [data.py](src/data.py) file, which is seen as a class.
+
+- Some files using TensorFlow may require the following text code in the Python environment in order to solve a float problem:
+```
+$env:TF_ENABLE_ONEDNN_OPTS=0
+```
 
 ## References
 This section will include any citations in IEEE format used to help create this repository.
