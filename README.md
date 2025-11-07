@@ -57,5 +57,7 @@ Use 'pip install -r requirements.txt' to install the required dependencies.
 - In the search bar, type in "Python: Create Environment" and then select a preferred environment. This code used .venv as the virtual environment.
 - When the virtual environment is open (appears as .venv in the list of items in the left menu), you may navigate to the various .py files containing machine learning technique codes and select it. At this point, you may open your terminal and install the pip requirements for the necessary libraries in order to execute the code. Then, you may hit "Run" on the top right hand corner to execute the code.
 
+- Each machine learning technique's .py file under the src folder will have their own set of instructions, but everything requires an initial run of the [data.py](src/data.py) file, which is seen as a class.
+
 ## References
 This section will include any citations in IEEE format used to help create this repository.

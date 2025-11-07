@@ -37,6 +37,6 @@ def load_and_preprocess_cifar10(test_size=0.2, random_state=42):
         X, y, test_size=test_size, random_state=random_state
     )
     # Reshape to image dimensions: (samples, height, width, channels)
-    X_train = X_train.reshape(-1, 32, 32, 3)
-    X_test = X_test.reshape(-1, 32, 32, 3)
+    X_train = X_train.to_numpy().reshape(-1, 32 * 32 * 3)
+    X_test = X_test.to_numpy().reshape(-1, 32 * 32 * 3)
     return X_train, X_test, y_train, y_test
